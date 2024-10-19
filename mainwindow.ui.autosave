@@ -42,6 +42,7 @@
     <addaction name="OpenFile"/>
     <addaction name="SaveFile"/>
     <addaction name="SaveFileAs"/>
+    <addaction name="Table"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
@@ -51,18 +52,10 @@
     <addaction name="Replace"/>
     <addaction name="Clear"/>
    </widget>
-   <widget class="QMenu" name="menu_3">
-    <property name="title">
-     <string>Текст</string>
-    </property>
-    <addaction name="Palette"/>
-    <addaction name="FontAndSize"/>
-   </widget>
    <widget class="QMenu" name="menu_4">
     <property name="title">
      <string>Таблица</string>
     </property>
-    <addaction name="Table"/>
     <addaction name="AddRow"/>
     <addaction name="AddColumn"/>
     <addaction name="DeleteRow"/>
@@ -70,21 +63,7 @@
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
-   <addaction name="menu_3"/>
    <addaction name="menu_4"/>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-   <addaction name="CreateNewFile"/>
-   <addaction name="OpenFile"/>
-   <addaction name="SaveFile"/>
-   <addaction name="SaveFileAs"/>
-   <addaction name="Table"/>
   </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
