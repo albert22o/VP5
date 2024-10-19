@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>images/icons/add-document _black.png</file>
+        <file>images/icons/add-document.png</file>
+        <file>images/icons/clear.png</file>
+        <file>images/icons/copy.png</file>
+        <file>images/icons/cut.png</file>
+        <file>images/icons/folder-open.png</file>
+        <file>images/icons/folder-open_black.png</file>
+        <file>images/icons/paste.png</file>
+        <file>images/icons/replace.png</file>
+        <file>images/icons/save.png</file>
+        <file>images/icons/save_as.png</file>
+        <file>images/icons/save_as_black.png</file>
+        <file>images/icons/save_black.png</file>
+        <file>images/icons/search.png</file>
+        <file>images/icons/undo.png</file>
+        <file>images/icons/un-undo.png</file>
+        <file>images/icons/palette.png</file>
+        <file>images/icons/text.png</file>
+        <file>images/icons/table-list.png</file>
+        <file>images/icons/column.png</file>
+        <file>images/icons/delete column.png</file>
+        <file>images/icons/delete row.png</file>
+        <file>images/icons/indent.png</file>
+        <file>images/icons/row.png</file>
+    </qresource>
+</RCC>
