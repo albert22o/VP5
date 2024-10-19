@@ -644,13 +644,6 @@ void MainWindow::on_Paste_triggered()
     }
 }
 
-void MainWindow::on_Cut_triggered()
-{
-    if(editor && editor->textCursor().hasSelection()) {
-            editor->cut();
-        }
-}
-
 void MainWindow::on_Redo_triggered()
 {
     if(editor){
