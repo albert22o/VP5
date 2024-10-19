@@ -887,11 +887,6 @@ void MainWindow::on_Table_triggered() {
     columnsSpinBox->setRange(1, 100);
     columnsSpinBox->setValue(3);
 
-    // Радио-кнопки для выбора типа вставки
-    QRadioButton *textEditorOption = new QRadioButton(tr("Вставить в текстовый редактор"), &dialog);
-    QRadioButton *widgetOption = new QRadioButton(tr("Создать таблицу как виджет"), &dialog);
-    textEditorOption->setChecked(true); // По умолчанию выбран текстовый редактор
-
     // Кнопки OK и Отмена
     QPushButton *okButton = new QPushButton(tr("OK"), &dialog);
     QPushButton *cancelButton = new QPushButton(tr("Отмена"), &dialog);
@@ -902,8 +897,6 @@ void MainWindow::on_Table_triggered() {
     layout->addWidget(rowsSpinBox, 0, 1);
     layout->addWidget(columnsLabel, 1, 0);
     layout->addWidget(columnsSpinBox, 1, 1);
-    layout->addWidget(textEditorOption, 2, 0, 1, 2);
-    layout->addWidget(widgetOption, 3, 0, 1, 2);
     layout->addWidget(okButton, 4, 0);
     layout->addWidget(cancelButton, 4, 1);
     dialog.setLayout(layout);
@@ -917,24 +910,6 @@ void MainWindow::on_Table_triggered() {
         int rows = rowsSpinBox->value();
         int columns = columnsSpinBox->value();
 
-        if (textEditorOption->isChecked()) {
-            // Вставляем таблицу как HTML в QTextEdit
-            editor = qobject_cast<QTextEdit*>(ui->tabWidget->currentWidget());
-            if (editor) {
-                QString htmlTable = "<table border='1' cellspacing='2' cellpadding='4'>";
-                for (int row = 0; row < rows; ++row) {
-                    htmlTable += "<tr>";
-                    for (int col = 0; col < columns; ++col) {
-                        htmlTable += "<td></td>";
-                    }
-                    htmlTable += "</tr>";
-                }
-                htmlTable += "</table>";
-
-                // Вставляем таблицу в редактор
-                editor->insertHtml(htmlTable);
-            }
-        } else if (widgetOption->isChecked()) {
             // Создаем таблицу в виде QTableWidget
             tableWidget = new QTableWidget(rows, columns);
             tableWidget->setWindowTitle("Таблица");
@@ -944,7 +919,7 @@ void MainWindow::on_Table_triggered() {
             int index = ui->tabWidget->addTab(tableWidget, tr("Таблица %1").arg(ui->tabWidget->count() + 1));
             ui->tabWidget->setCurrentIndex(index);
 
-        }
+
     }
 }
 
